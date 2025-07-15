@@ -116,6 +116,6 @@ const API = axios.create({
 ---
 
 ## 👨‍💻 Author
-**Aman** — Full Stack & Cloud Developer
+**Aman** 
 
 Feel free to reach out if you'd like to collaborate or have feedback! 🚀
