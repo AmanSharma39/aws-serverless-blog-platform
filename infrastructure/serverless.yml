@@ -1,0 +1,42 @@
+service: serverless-blog-api
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: eu-west-1
+
+functions:
+  createPost:
+    handler: ../backend/controllers/createPost.handler
+    events:
+      - http:
+          path: posts
+          method: post
+
+  getPosts:
+    handler: ../backend/controllers/getPosts.handler
+    events:
+      - http:
+          path: posts
+          method: get
+
+  getPostById:
+    handler: ../backend/controllers/getPostById.handler
+    events:
+      - http:
+          path: posts/{id}
+          method: get
+
+  updatePost:
+    handler: ../backend/controllers/updatePost.handler
+    events:
+      - http:
+          path: posts/{id}
+          method: put
+
+  deletePost:
+    handler: ../backend/controllers/deletePost.handler
+    events:
+      - http:
+          path: posts/{id}
+          method: delete
